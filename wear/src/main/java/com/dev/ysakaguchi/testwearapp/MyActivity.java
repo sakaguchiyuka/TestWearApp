@@ -1,12 +1,11 @@
 package com.dev.ysakaguchi.testwearapp;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.wearable.activity.WatchActivity;
 import android.support.wearable.view.WatchViewStub;
-import android.util.Log;
 import android.widget.TextView;
 
-public class MyActivity  extends WatchActivity {
+public class MyActivity  extends Activity {
 
     private TextView mTextView;
 
@@ -19,7 +18,7 @@ public class MyActivity  extends WatchActivity {
             @Override
             public void onLayoutInflated(WatchViewStub stub) {
                 mTextView = (TextView) stub.findViewById(R.id.text);
-                Log.d(TAG, "TextView: " + mTextView.getText() + " view=" + mTextView);
+//                Log.d(TAG, "TextView: " + mTextView.getText() + " view=" + mTextView);
             }
         });
     }
